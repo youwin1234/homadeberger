@@ -1,0 +1,230 @@
+@media only screen and (min-width: 820px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("backgroundImage.PNG");
+    background-size: 50% auto;
+    background-color: rgb(94, 66, 110);
+    margin: 0rem;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  #main-video {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+  }
+  
+  #image-track {
+    /* Use CSS Grid to show images in a responsive grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2vmin;
+    width: min(1200px, 92vw);
+    margin: 4vmin auto;
+    position: relative;
+    transform: none;
+    user-select: none; /* -- Prevent image highlighting -- */
+    padding: 2vmin;
+  }
+  
+  #image-track > .image {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 8px;
+    display: block;
+  }
+  
+  body.menu-toggled > .meta-link > span {
+    color: rgb(30, 30, 30);
+  }
+  
+  #prt-link {
+    bottom: 60px;
+  }
+
+  #art-link {
+    bottom: 110px;
+  }
+  
+  #prt-link > i {
+    color: #5a90f5;
+  }
+  
+  #insta-link > i {
+    color: #f78b8b;
+  }
+
+  #art-link > i {
+    color: rgb(170, 164, 241);
+  }
+  
+  .meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 400ms, border-color 400ms;
+    z-index: 10000;
+  }
+  
+  .meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .meta-link > i, .meta-link > span {
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  .meta-link > span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+  }
+}
+
+/* Enlarge-on-click overlay and image styles */
+#enlarge-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  z-index: 14000;
+  cursor: zoom-out;
+}
+
+.image.is-enlarged {
+  position: fixed !important;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: auto !important;
+  max-width: 90vw !important;
+  height: auto !important;
+  max-height: 90vh !important;
+  z-index: 16000 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6) !important;
+  cursor: zoom-out !important;
+  object-fit: contain !important;
+}
+
+/* For Mobile */
+@media only screen and (max-width: 819px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("backgroundImage.PNG");
+    background-size: 50% auto;
+    background-color: rgb(94, 66, 110);
+    margin: 0rem;
+    overflow: auto;
+  }
+
+  #image-track {
+    --visible: 100;         /* fewer visible tiles on very small screens */
+    --gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--gap);
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    user-select: none;
+    width: 92vw;
+    margin: 2vmin auto;
+    padding: 2vmin 0;
+    height: auto;
+    overflow: visible;
+    align-items: stretch;
+    justify-content: center;
+    z-index: 1;
+  }
+
+  #image-track > .image {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    object-position: top center;
+    border-radius: 6px;
+    pointer-events: auto;
+  }
+
+  body.menu-toggled > .meta-link > span {
+    color: rgb(30, 30, 30);
+  }
+  
+  #prt-link {
+    bottom: 60px;
+  }
+
+  #art-link {
+    bottom: 110px;
+  }
+  
+  #prt-link > i {
+    color: #5a90f5;
+  }
+
+  #art-link > i {
+    color: rgb(170, 164, 241);
+  }
+  
+  #insta-link > i {
+    color: #f78b8b;
+  }
+  
+  .meta-link {
+    align-items: center;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    bottom: 10px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    cursor: pointer;  
+    display: inline-flex;
+    gap: 5px;
+    left: 10px;
+    padding: 10px 20px;
+    position: fixed;
+    text-decoration: none;
+    transition: background-color 400ms, border-color 400ms;
+    z-index: 10000;
+  }
+  
+  .meta-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .meta-link > i, .meta-link > span, .meta-link > i {
+    height: 20px;
+    line-height: 20px;
+  }
+  
+  .meta-link > span {
+    color: white;
+    font-family: "Rubik", sans-serif;
+    font-weight: 500;
+  }
+}
