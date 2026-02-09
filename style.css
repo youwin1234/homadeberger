@@ -1,5 +1,11 @@
 video {
-  cursor: url('cursors/resizedCursor.png'),default;
+  cursor: url('cursors/smiski.cur'),default;
+}
+
+#main-video {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
 }
 
 @media only screen and (min-width: 820px) {
@@ -15,35 +21,16 @@ video {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    cursor: url('cursors/resizedCursor.png'),default;
+    cursor: url('cursors/smiski.cur'), default;
+    padding-top: 3.5rem;
   }
-  
+
   #main-video {
     max-width: 90vw;
     max-height: 90vh;
     border-radius: 8px;
-  }
-  
-  #image-track {
-    /* Use CSS Grid to show images in a responsive grid */
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2vmin;
-    width: min(1200px, 92vw);
-    margin: 4vmin auto;
-    position: relative;
-    transform: none;
-    user-select: none; /* -- Prevent image highlighting -- */
-    padding: 2vmin;
-  }
-  
-  #image-track > .image {
-    width: 100%;
-    height: 320px;
-    object-fit: cover;
-    object-position: top center;
-    border-radius: 8px;
     display: block;
+    margin: 0 auto 2vmin auto;
   }
   
   body.menu-toggled > .meta-link > span {
@@ -107,73 +94,34 @@ video {
   }
 }
 
-/* Enlarge-on-click overlay and image styles */
-#enlarge-overlay {
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.6);
-  display: none;
-  z-index: 14000;
-  cursor: zoom-out;
-}
-
-.image.is-enlarged {
-  position: fixed !important;
-  top: 50% !important;
-  left: 50% !important;
-  transform: translate(-50%, -50%) !important;
-  width: auto !important;
-  max-width: 90vw !important;
-  height: auto !important;
-  max-height: 90vh !important;
-  z-index: 16000 !important;
-  border-radius: 12px !important;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6) !important;
-  cursor: zoom-out !important;
-  object-fit: contain !important;
-}
 
 /* For Mobile */
 @media only screen and (max-width: 819px) {
   body {
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     background-image: url("backgroundImage.PNG");
     background-size: 30% auto;
     background-color: rgb(33, 31, 34);
     margin: 0rem;
     overflow: auto;
-    cursor: url('cursors/resizedCursor.png'),default;
+    cursor: url('cursors/smiski.cur'), default;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 3.5rem;
   }
 
-  #image-track {
-    --visible: 100;         /* fewer visible tiles on very small screens */
-    --gap: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--gap);
-    position: relative;
-    left: auto;
-    top: auto;
-    transform: none;
-    user-select: none;
-    width: 92vw;
-    margin: 2vmin auto;
-    padding: 2vmin 0;
-    height: auto;
-    overflow: visible;
-    align-items: stretch;
-    justify-content: center;
-    z-index: 1;
-  }
-
-  #image-track > .image {
+  #main-video {
+    max-width: 92vw;
     width: 100%;
-    height: 160px;
+    height: 70vh;
+    max-height: 70vh;
     object-fit: cover;
-    object-position: top center;
-    border-radius: 6px;
-    pointer-events: auto;
+    display: block;
+    margin: 0 auto 2vmin auto;
+    border-radius: 10px;
   }
 
   body.menu-toggled > .meta-link > span {
