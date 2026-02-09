@@ -1,13 +1,3 @@
-/*
-	Enlarge-on-click behavior
-
-	Click an image (.image) to toggle an enlarged view. Clicking the overlay,
-	pressing Escape, or clicking the image again will close the enlarged view.
-
-	This keeps the previous track interaction (commented out) intact for
-	future reference.
-*/
-
 const track = document.getElementById("image-track");
 if (track) {
 	let currentEnlarged = null;
@@ -96,8 +86,3 @@ if (track) {
 		if (currentEnlarged) ev.preventDefault();
 	});
 }
-
-/*
-	Original track interaction (drag-to-scroll) was commented out in the
-	repository; kept intentionally for future use.
-*/
