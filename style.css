@@ -10,7 +10,7 @@ video {
 
 @media only screen and (min-width: 820px) {
   body {
-    height: 100vh;
+    height: 70vh;
     width: 100vw;
     background-image: url("backgroundImage.PNG");
     background-size: 10% auto;
@@ -26,8 +26,8 @@ video {
   }
 
   #main-video {
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 70vw;
+    max-height: 70vh;
     border-radius: 8px;
     display: block;
     margin: 0 auto 2vmin auto;
