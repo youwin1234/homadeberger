@@ -44,9 +44,17 @@ video {
   #art-link {
     bottom: 110px;
   }
+
+  #rsvp-link {
+    bottom: 160px;
+  }
+
+  #rsvp-link > i {
+    color: #5a90f5;
+  }
   
   #prt-link > i {
-    color: #5a90f5;
+    color: #f78b8b;
   }
   
   #insta-link > i {
@@ -54,7 +62,7 @@ video {
   }
 
   #art-link > i {
-    color: rgb(170, 164, 241);
+    color: #f78b8b;
   }
   
   .meta-link {
@@ -135,13 +143,21 @@ video {
   #art-link {
     bottom: 110px;
   }
+
+  #rsvp-link {
+    bottom: 160px;
+  }
+
+  #rsvp-link > i {
+    color: #5a90f5;
+  }
   
   #prt-link > i {
-    color: #5a90f5;
+    color: #f78b8b;
   }
 
   #art-link > i {
-    color: rgb(170, 164, 241);
+    color: #f78b8b;
   }
   
   #insta-link > i {
