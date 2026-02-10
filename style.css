@@ -2,6 +2,10 @@ video {
   cursor: url('cursors/smiski.cur'),default;
 }
 
+html {
+  cursor: url('cursors/smiski.cur'),default;
+}
+
 #main-video {
     max-width: 90vw;
     max-height: 90vh;
