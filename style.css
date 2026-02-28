@@ -13,10 +13,13 @@ html {
 }
 
 @media only screen and (min-width: 820px) {
+  /* animate between cat1 and cat2 as the background */
   body {
     height: 70vh;
     width: 100vw;
-    background-image: url("backgroundImage.PNG");
+    background-image: url("cat1.PNG");
+    background-position: right bottom;
+    background-repeat: repeat;
     background-size: 10% auto;
     background-color: rgb(33, 31, 34);
     margin: 0rem;
@@ -27,6 +30,7 @@ html {
     justify-content: center;
     cursor: url('cursors/smiski.cur'), default;
     padding-top: 3.5rem;
+    animation: catSwap 10s infinite alternate;
   }
 
   #main-video {
@@ -107,12 +111,26 @@ html {
 }
 
 
+@keyframes catSwap {
+  0% {
+    background-image: url("cat1.PNG");
+  }
+  50% {
+    background-image: url("cat2.PNG");
+  }
+  100% {
+    background-image: url("cat1.PNG");
+  }
+}
+
 /* For Mobile */
 @media only screen and (max-width: 819px) {
   body {
     height: 90vh;
     width: 100vw;
-    background-image: url("backgroundImage.PNG");
+    background-image: url("cat1.PNG");
+    background-position: right bottom;
+    background-repeat: repeat;
     background-size: 30% auto;
     background-color: rgb(33, 31, 34);
     margin: 0rem;
@@ -123,6 +141,7 @@ html {
     align-items: center;
     justify-content: flex-start;
     padding-top: 3.5rem;
+    animation: catSwap 10s infinite alternate;
   }
 
   #main-video {
