@@ -86,3 +86,11 @@ if (track) {
 		if (currentEnlarged) ev.preventDefault();
 	});
 }
+
+// Safari occasionally refuses to render video until after a refresh. force the element to load
+window.addEventListener('load', () => {
+    const v = document.getElementById('main-video');
+    if (v) {
+        v.load();
+    }
+});
