@@ -33,6 +33,13 @@ html {
     animation: catSwap 10s infinite alternate;
   }
 
+  body.about-page {
+    height: auto;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+  }
+
   #main-video {
     max-width: 70vw;
     max-height: 70vh;
@@ -71,6 +78,10 @@ html {
 
   #art-link > i {
     color: #f78b8b;
+  }
+
+  #about-link {
+    color: #9db8ef;
   }
   
   .meta-link {
@@ -199,6 +210,30 @@ html {
     line-height: 1.6;
     margin: 0;
   }
+
+  .about-section {
+    max-width: 70vw;
+    margin: 2vmin auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(50px);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-section h1,
+  .about-section p,
+  .about-section a {
+    color: white;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+/* Force about section to be scrollable when content exceeds viewport height */
+.about-section {
+  max-height: calc(100vh - 4rem) !important;
+  overflow-y: auto !important;
 }
 
 @keyframes catSwap {
@@ -233,7 +268,12 @@ html {
     padding-top: 3.5rem;
     animation: catSwap 10s infinite alternate;
   }
-
+body.about-page {
+    height: auto;
+    min-height: 100vh;
+    justify-content: flex-start;
+    padding-top: 1.5rem;
+  }
   #main-video {
     max-width: 92vw;
     width: 100%;
@@ -275,6 +315,10 @@ html {
   
   #insta-link > i {
     color: #f78b8b;
+  }
+
+  #about-link {
+    color: #9db8ef;
   }
   
   .meta-link {
@@ -403,5 +447,23 @@ html {
     font-size: 0.85rem;
     line-height: 1.6;
     margin: 0;
+  }
+
+  .about-section {
+    max-width: 70vw;
+    margin: 2vmin auto;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 2rem;
+    backdrop-filter: blur(50px);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+
+  .about-section h1,
+  .about-section p,
+  .about-section a {
+    color: white;
+    font-family: "Raleway", sans-serif;
   }
 }
